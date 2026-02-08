@@ -1,10 +1,10 @@
 {
-  "name": "FHEM",
-  "version": "0.0.9",
-  "slug": "fhem",
-  "description": "FHEM Plugin",
+  "name": "FHEM (local)",
+  "version": "0.1.0",
+  "slug": "fhem_local",
+  "description": "FHEM Plugin zalc1 fork",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-  "url": "https://github.com/KastB/addon-fhem",
+  "url": "https://github.com/zalc1/addon-fhem",
   "startup": "services",
   "boot": "auto",
   "webui": "http://[HOST]:[PORT:8083]/fhem",
@@ -16,7 +16,7 @@
   "apparmor": false,
   "ports": {
     "8083/tcp": 8083,
-    "7072/tcp": null
+    "7072/tcp": 7072
   },
   "ports_description": {
     "8083/tcp": "WebUI",
@@ -34,10 +34,10 @@
   ],
   "init": false,
   "options": {
-    "apt_pks": "",
+    "apt_pks": "vim libjson-perl liblwp-protocol-https-perl libxml-simple-perl",
     "pip_pks": "",
     "npm_pks": "",
-    "cpan_pks": "Net::MQTT  Net::MQTT::Message Net::MQTT::Message::JustMessageId"
+    "cpan_pks": "Net::MQTT Net::MQTT::Message Net::MQTT::Message::JustMessageId Readonly"
   },
   "schema": {
     "apt_pks": "str",
