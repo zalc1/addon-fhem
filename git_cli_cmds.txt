@@ -1,0 +1,15 @@
+cd /addons/fhem-local
+
+# Stage all moves, deletions, and new files
+git add .
+
+# Check the status to make sure it looks right
+git status
+
+# Commit the structural change
+git commit -m "insert_comment
+
+# Push to your fork
+git push origin master
+
+
